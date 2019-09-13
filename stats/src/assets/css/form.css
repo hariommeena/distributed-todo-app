@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Helvetica, sans-serif;
+    color: #2c3e50;
+  }
+  .Text_strong__Y9Ddh, .Text_subtle__3gCx-, .Text_success__3vneH {
+    font-family: effra,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #003b61;
+    fill: #003b61;
+}
+.Text_strong__Y9Ddh {
+  font-weight: 500;
+}
+.MiddleTruncatedText_container__1Vwkc {
+  display: flex;
+  white-space: pre;
+  overflow: hidden;
+  align-items: baseline;
+}
+.MiddleTruncatedText_container__1Vwkc {
+  display: flex;
+  white-space: pre;
+  overflow: hidden;
+  align-items: baseline;
+}
+  .Box_alignment-stretch__1hRVR {
+    align-items: stretch;
+}
+.Box_justification-start__2Sr9S {
+    justify-content: flex-start;
+}
+.Box_direction-horizontal__3mWnD {
+    display: flex;
+    flex-direction: row;
+}
+
+.Text_body__2EqxO, .Text_code__3rrhy, .Text_danger__3cC3Z, .Text_italic__2OODa, .Text_placeholder__12ZBU, .Text_strong__Y9Ddh, .Text_subtle__3gCx-, .Text_success__3vneH {
+  font-family: effra,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #003b61;
+  fill: #003b61;
+}
+
+.Text_strong__Y9Ddh {
+  font-weight: 500;
+}
+
+  .text_h3 {
+    font-family: Campton,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #003b61;
+    fill: #003b61;
+}
+  
+  .service-box {
+    padding: 12px;
+    border: solid #c6d0d9;
+    border-color: #c6d0d9;
+    border-radius: 2px;
+    border-width: thin;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 700px;
+    margin-right: 220px;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #e4f1fa;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    margin-left: -3px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  .content:hover {
+    background-color: #c8ced3;
+  }
+  
+  .content:active {
+    background-color: #c8ced3;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -13px;
+    background-color: #0065a5;
+    border: 3px solid #0065a5;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #20a8d8;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #20a8d8;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    z-index: 1;
+    left: 30px;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -4px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 8px;
+    margin-top: 8px;
+    background-color: white;
+    position: relative;
+    border: solid #20a8d8;
+    border-color: #20a8d8;
+    border-width: thin;
+    border-radius: 2px;
+    font-family: Campton,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #003b61;
+    fill: #003b61;
+  }
+
+  .content-header {
+    
+    background-color: white;
+    position: relative;
+    font-family: Campton,Helvetica,Arial,sans-serif;
+    font-size: 18px;    
+    line-height: 24px;
+    font-weight: 600;
+    color: #003b61;
+    fill: #003b61;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+      left: 15px;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+  .summary-box {
+    border: solid grey;
+    border-color: grey;
+    border-radius: 2px;
+    border-width: thin;
+    margin-bottom: 20px;
+  }
+  .form-flow-header {
+    padding: 4px;
+    width: 180px;
+    height: 35px;
+    font-size: 16px;
+    color: #202859;
+    background: #e7f5fb;
+    font-family: Montserrat, sans-serif;
+    text-align: left;
+  }
+  .form-flow-value {
+    font-size: 16px;
+    background: #e7f5fb;
+    padding: 4px;
+    width: 250px;
+    height: 35px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+  }
+  .box-vertical.box-spacing-small > :last-child {
+    margin-bottom: 0;
+  }
+  
+  .box-vertical.box-spacing-small > * {
+    margin-bottom: 8px;
+  }
+  .box-square.box-small {
+    padding: 16px;
+  }
+  .box-stretch {
+    align-items: stretch;
+  }
+  .box-start {
+    justify-content: flex-start;
+  }
+  .box-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-bordered {
+    border: 1px solid #c6d0d9;
+  }
+  .box-white {
+    background-color: #fff;
+  }
+  .box-stretch {
+    align-items: stretch;
+  }
+  .box-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .box-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+  *,
+  :after,
+  :before {
+    box-sizing: inherit;
+  }
